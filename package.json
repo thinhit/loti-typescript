@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/thinhit/loti-typescript#readme",
   "dependencies": {
+    "@types/bluebird": "^3.5.2",
     "@types/dotenv": "^2.0.20",
+    "@types/mongoose": "^4.7.11",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
     "cookie-parser": "^1.4.3",
     "errorhandler": "^1.5.0",
@@ -30,6 +33,7 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-typescript-compiler": "^1.0.1",
     "method-override": "^2.3.8",
+    "mongoose": "^4.9.5",
     "morgan": "^1.8.1"
   },
   "devDependencies": {

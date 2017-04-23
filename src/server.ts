@@ -24,10 +24,8 @@ class Server {
         return middleware.configuration;
     }
     static routes (): any {
-        this.app.get('/', function (req, res) {
-            res.send('hello world')
-        })
-        return routers.api();
+        
+        this.app.use(routers.api());
     }
     static start() : any {
         

@@ -1,14 +1,11 @@
 import express = require('express');
+import TemplateController = require('../../http/controllers/TemplateController');
 var routers = express.Router();
 
 class TemplatesRouter {
     get routes (){
-        routers.get('/', (req, res) => {
-            return res.json({
-                "error"         : false,
-                "error_message" : "Xin chao"
-            });
-        })
+        
+        routers.get('/', TemplateController.get)
         return routers;   
     }
 }

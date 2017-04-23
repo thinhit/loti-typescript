@@ -1,4 +1,5 @@
 var express = require('express');
+var TemplateController = require('../../http/controllers/TemplateController');
 var routers = express.Router();
 
 var TemplatesRouter = (function () {
@@ -6,12 +7,7 @@ var TemplatesRouter = (function () {
     }
     Object.defineProperty(TemplatesRouter.prototype, "routes", {
         get: function () {
-            routers.get('/', function (req, res) {
-                return res.json({
-                    "error": false,
-                    "error_message": "Xin chao"
-                });
-            });
+            routers.get('/', TemplateController.get);
             return routers;
         },
         enumerable: true,

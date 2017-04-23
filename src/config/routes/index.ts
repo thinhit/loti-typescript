@@ -1,13 +1,15 @@
-
 import TemplateRoute    = require('./TemplatesRouter')
+
 import express          = require('express');
 
 var app = express();
 
-class Route {
+
+class Route{
     static api () {
+        
         app.use('/api/templates', new TemplateRoute().routes);
-        return this;
+        return app;
     }
     static mobile (){
         return this;

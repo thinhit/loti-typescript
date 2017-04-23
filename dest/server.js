@@ -22,10 +22,7 @@ var Server = (function () {
         return middleware.configuration;
     };
     Server.routes = function () {
-        this.app.get('/', function (req, res) {
-            res.send('hello world');
-        });
-        return routers.api();
+        this.app.use(routers.api());
     };
     Server.start = function () {
         return this.app.listen(constants.HTTP_PORT, function () {

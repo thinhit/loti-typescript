@@ -1,4 +1,5 @@
 var TemplateRoute = require('./TemplatesRouter');
+
 var express = require('express');
 
 var app = express();
@@ -8,7 +9,7 @@ var Route = (function () {
     }
     Route.api = function () {
         app.use('/api/templates', new TemplateRoute().routes);
-        return this;
+        return app;
     };
     Route.mobile = function () {
         return this;
